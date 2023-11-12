@@ -1,0 +1,13 @@
+version: '3'
+services:
+  prog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5055:5055"
+    restart: always
+    volumes:
+      - .:/prog
+    container_name: prog
+    

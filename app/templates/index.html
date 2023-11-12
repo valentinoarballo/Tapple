@@ -1,0 +1,131 @@
+{% extends 'layout.html' %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block body %}
+
+<!-- Seccion Hero -->
+<section class="bg-black text-white">
+    <div class="flex flex-col items-center justify-center pt-16 mx-auto text-center">
+        <div class="max-w-xl mb-12">
+            <div class="flex flex-col justify-center items-center">
+                <h1 class="text-5xl font-semibold">IPhone 15 Pro</h1>
+                <h1 class="text-xl pt-2">Beyond Pro.</h1>
+
+                <div class="flex gap-10 mt-5">
+                    <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Learn More</p>
+                    <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Buy</p>
+                </div>
+
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='hero.svg') }}"
+            class="w-full max-w-screen-sm mx-auto md:w-auto lg:max-w-screen-lg" alt="" />
+    </div>
+</section>
+
+
+<!-- Paneles con productos destacados -->
+<section class="container mx-auto md:my-24 h-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+        
+        
+        <!-- Ipads -->
+        <div class="relative">
+            <img src="{{ url_for('static', filename='ipad.svg') }}"
+                class="absolute inset-0 object-cover w-full h-full" alt="" />
+            <div class="relative min-h-[540px]">
+                <div class="flex flex-col items-center justify-between pt-10">
+                    <div class=" flex flex-col justify-center items-center ">
+                        <p class="text-3xl font-semibold">IPad</p>
+                        <p class="text-xl pt-2 text-center">
+                            Lovable. Drawable. Magical.
+                        </p>
+                        <div class="flex gap-10 mt-2">
+                            <p class='text-lg font-medium text-blue-500 hover:underline cursor-pointer'>Learn More</p>
+                            <p class='text-lg font-medium text-blue-500 hover:underline cursor-pointer'>Buy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- laptops -->
+        <div class="bg-black relative text-white ">
+            <img src="{{ url_for('static', filename='macbook.svg') }}"
+                class="absolute inset-0 object-cover w-full h-full" alt="" />
+            <div class="relative min-h-[540px]">
+                <div class="flex flex-col items-center justify-between pt-10">
+                    <div class=" flex flex-col justify-center items-center text-white">
+                        <p class="text-3xl font-semibold">MacBook Pro</p>
+                        <p class="text-xl pt-2">
+                            Supercharged by M2 Pro and M2 Max.
+                        </p>
+
+                        <div class="flex gap-10 mt-5">
+                            <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Learn More
+                            </p>
+                            <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Buy
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Tapple tipo alexa (?) -->
+        <div class="bg-black relative text-white ">
+            <img src="{{ url_for('static', filename='home.svg') }}"
+                class="absolute inset-0 object-cover w-full h-full" alt="" />
+            <div class="relative min-h-[540px]">
+                <div class="flex flex-col items-center justify-between pt-10">
+                    <div class=" flex flex-col justify-center items-center text-white">
+                        <p class="text-3xl font-semibold">Tapple IA</p>
+                        <p class="text-xl pt-2">
+                            On your HomePod.
+                        </p>
+
+                        <div class="flex gap-10 mt-5">
+                            <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Learn More
+                            </p>
+                            <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Buy
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Airpods  -->
+        <div class="relative">
+            <img src="{{ url_for('static', filename='airpodspro.svg') }}"
+                class="absolute inset-0 object-cover w-full h-full" alt="" />
+            <div class="relative min-h-[540px]">
+                <div class="flex flex-col items-center justify-between pt-10">
+                    <div class=" flex flex-col justify-center items-center text-white">
+                        <p class="text-3xl font-semibold">AirPods Pro</p>
+                        <p class="text-xl pt-2">
+                            Up to 2x more Active <br /> Noise Cancellation.
+                        </p>
+
+                        <div class="flex gap-10 mt-5">
+                            <p class="text-lg ">Learn More</p>
+                            <p class="text-lg ">Buy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
