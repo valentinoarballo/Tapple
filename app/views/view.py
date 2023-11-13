@@ -30,6 +30,11 @@ def tapple():
     return render_template("tapple.html")
 
 
+@app.route("/soporte")
+def soporte():
+    return render_template("soporte.html")
+
+
 @app.route("/manual")
 def manual():
     return render_template("manual.html")
