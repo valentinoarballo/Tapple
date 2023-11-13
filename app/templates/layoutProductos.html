@@ -13,32 +13,33 @@ Productos
         <div class="flex flex-col justify-between h-full px-6 py-4">
             <div>
                 <div class="font-bold text-3xl mb-2">{{ producto.nombre }}</div>
-                
+
                 <img src="{{ producto.foto }}" alt="{{ producto.nombre }}">
             </div>
-            
+
             <div class="flex gap-10 mt-5">
-                <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Learn More</p>
-                <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Buy</p>
+                <a class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Ver mas</a>
+                <a href="/verificacarrito" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Comprar</a>
             </div>
         </div>
     </div>
-    
+
     {% endfor %}
 </div>
 
 
 <!-- Sección Hero -->
-<section class="bg-black text-white h-[800px] mt-10" style="background-image: url('{{ producto_hero.foto }}'); background-size: cover; background-position: center;">
+<section class="bg-black text-white h-[800px] mt-10"
+    style="background-image: url('{{ producto_hero.foto }}'); background-size: cover; background-position: center;">
     <div class="flex flex-col items-center justify-center pt-16 mx-auto text-center">
         <div class="max-w-xl mb-12">
             <div class="flex flex-col justify-center items-center">
-                <h1 class="text-5xl font-semibold">{{ producto_hero.nombre }}</h1>
+                <h1 class="text-7xl font-semibold">{{ producto_hero.nombre }}</h1>
                 <h1 class="text-xl pt-2">Beyond Pro.</h1>
 
                 <div class="flex gap-10 mt-5">
-                    <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Learn More</p>
-                    <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Buy</p>
+                    <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Ver mas</p>
+                    <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Comprar</p>
                 </div>
 
             </div>
@@ -48,7 +49,116 @@ Productos
 </section>
 
 
+<!-- Seccion productos destacados  -->
+<section class="container mx-auto md:my-24 h-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
 
+
+        <!-- Ipads -->
+        <div class="relative m-2 rounded-xl shadow-2xl">
+            <img src="{{ url_for('static', filename='store/store-card-40-accessories-202303.jpeg') }}"
+                class="absolute inset-0 object-cover w-full h-full shadow-2xl rounded-xl" alt="" />
+            <div class="relative min-h-[540px]">
+                <div class="flex flex-col items-center justify-between pt-10">
+                    <div class=" flex flex-col justify-center items-center ">
+                        <p class="text-3xl font-semibold">Apple Watch</p>
+                        <p class="text-xl pt-2 text-center">
+                            Liviano. Practico. De calidad.
+                        </p>
+                        <div class="flex gap-10 mt-2">
+                            <a href="/relojes" class='text-lg font-medium text-blue-500 hover:underline cursor-pointer'>
+                                Ver Mas
+                            </a>
+                            <a href="/verificacarrito" class='text-lg font-medium text-blue-500 hover:underline cursor-pointer'>
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- laptops -->
+        <div class="bg-black relative text-white m-2 rounded-xl shadow-2xl">
+            <img src="{{ url_for('static', filename='macbook.svg') }}"
+                class="absolute inset-0 object-cover w-full h-full shadow-2xl rounded-xl" alt="" />
+            <div class="relative min-h-[540px]">
+                <div class="flex flex-col items-center justify-between pt-10">
+                    <div class=" flex flex-col justify-center items-center text-white">
+                        <p class="text-3xl font-semibold">MacBook Pro</p>
+                        <p class="text-xl pt-2">
+                            Supercargado con el nuevo procesador M2.
+                        </p>
+
+                        <div class="flex gap-10 mt-5">
+                            <a href="/laptops" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Ver Mas
+                            </a>
+                            <a href="/verificacarrito" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Tapple tipo alexa (?) -->
+        <div class="bg-black relative text-white m-2 rounded-xl shadow-2xl">
+            <img src="{{ url_for('static', filename='home.svg') }}"
+                class="absolute inset-0 object-cover w-full h-full shadow-2xl rounded-xl" alt="" />
+            <div class="relative min-h-[540px]">
+                <div class="flex flex-col items-center justify-between pt-10">
+                    <div class=" flex flex-col justify-center items-center text-white">
+                        <p class="text-3xl font-semibold">Tapple IA</p>
+                        <p class="text-xl pt-2">
+                            En tu Iphone, MacBook, HomePod.
+                        </p>
+
+                        <div class="flex gap-10 mt-5">
+                            <a href="/tapple" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Ver Mas
+                            </a>
+                            <a href="/verificacarrito" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Airpods  -->
+        <div class="relative m-2 rounded-xl shadow-2xl">
+            <img src="{{ url_for('static', filename='store/store-card-40-iphone-14-pro-202303.jpeg') }}"
+                class="absolute inset-0 object-cover w-full h-full shadow-2xl rounded-xl" alt="" />
+            <div class="relative min-h-[540px]">
+                <div class="flex flex-col items-center justify-between pt-10">
+                    <div class=" flex flex-col justify-center items-center text-white">
+                        <p class="text-3xl font-semibold">Celulares</p>
+                        <p class="text-xl pt-2 text-center">
+                            La mejor calidad de construccion. <br /> Con el mejor software.
+                        </p>
+
+                        <div class="flex gap-10 mt-5">
+                            <a href="/celulares"
+                                class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Ver Mas
+                            </a>
+                            <a href="/verificacarrito" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
 {% endblock %}

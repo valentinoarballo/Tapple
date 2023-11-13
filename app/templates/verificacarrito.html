@@ -1,0 +1,102 @@
+{% extends 'layoutPrincipal.html' %}
+{% block title %}
+carrito
+{% endblock %}
+
+{% block body %}
+
+<section class="flex justify-between w-full">
+
+    <div class="my-6 sm:w-1/4 w-full pl-8">
+        <p class="text-2xl font-bold">Verifica tu carrito</p>
+    </div>
+
+    <!-- Barra Progreso -->
+    <div class="w-full my-6 pr-8">
+        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+            <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-full"
+                style="width: 25%"> 25%</div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Items del carrito -->
+<section class="w-full rounded-lg">
+    <div class="flex rounded-lg w-full p-8">
+
+        <img class="w-[200px] rounded-lg sm:ml-12 m-0"
+            src="{{ url_for('static', filename='store/compare_ultra2.jpg') }}" />
+
+        <div class="flex flex-col justify-start p-6 w-full">
+            <div class="mb-2 text-2xl font-semibold text-neutral-800 flex">
+                <h5>
+                    Apple Watch
+                </h5>
+                <button
+                    class="ml-auto bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 
+                    hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <p class="mb-4 text-base text-neutral-600">
+                $200 USD
+            </p>
+            <p class="text-xs text-neutral-500">
+                Añadiste este producto a tu carrito hace 18 mins.
+            </p>
+        </div>
+    </div>
+</section>
+
+<hr>
+<section class="w-full rounded-lg">
+    <div class="flex rounded-lg w-full p-8">
+
+        <img class="w-[200px] rounded-lg sm:ml-12 m-0" src="{{ url_for('static', filename='store/airpods.png') }}" />
+
+        <div class="flex flex-col justify-start p-6 w-full">
+            <div class="mb-2 text-2xl font-semibold text-neutral-800 flex">
+                <h5>
+                    AirPods
+                </h5>
+                <button
+                    class="ml-auto bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 
+                    hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <p class="mb-4 text-base text-neutral-600">
+                $100 USD
+            </p>
+            <p class="text-xs text-neutral-500">
+                Añadiste este producto a tu carrito hace 3 dias.
+            </p>
+        </div>
+    </div>
+</section>
+<hr>
+
+
+<section class="flex w-full h-30 justify-between items-center px-24 p-y12">
+
+    <a href="/" class="text-blue-500 my-6 text-lg">Volver</a>
+
+    <a href="/verificacredenciales" 
+        class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br 
+        focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 
+        dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 m-6 ">
+        Continuar Compra
+</a>
+
+</section>
+
+
+{% endblock %}

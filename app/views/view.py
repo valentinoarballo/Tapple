@@ -25,6 +25,31 @@ def models():
     return render_template("models.html")
 
 
+@app.route("/fincarrito")
+def fincarrito():
+    return render_template("fincarrito.html")
+
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+
+@app.route("/verificacarrito")
+def verificacarrito():
+    return render_template("verificacarrito.html")
+
+
+@app.route("/carritotapple")
+def carritotapple():
+    return render_template("carritotapple.html")
+
+
+@app.route("/verificacredenciales")
+def verificacredenciales():
+    return render_template("verificacredenciales.html")
+
+
 @app.route("/tapple")
 def tapple():
     return render_template("tapple.html")
@@ -66,7 +91,7 @@ def relojes():
         Producto(nombre="Apple Watch se", foto="../static/store/compare_se.jpg"),
     ]
 
-    producto_reloj_hero = Producto(nombre="Apple Watch Ultra 2", foto="../static/store/watch_hero.jpg")
+    producto_reloj_hero = Producto(nombre="Apple Watch", foto="../static/store/watch_hero.jpg")
 
     return render_template('layoutProductos.html', productos=productos_relojes, producto_hero=producto_reloj_hero)
 
@@ -78,6 +103,6 @@ def laptps():
         Producto(nombre="MacBook Pro M1", foto="../static/store/compare_macbook_pro.jpg"),
     ]
 
-    producto_laptop_hero = Producto(nombre="New MacBook Pro M3", foto="../static/store/Apple-MacBook-Pro.jpg")
+    producto_laptop_hero = Producto(nombre="MacBook Pro M3", foto="../static/store/Apple-MacBook-Pro.jpg")
 
     return render_template('layoutProductos.html', productos=productos_laptops, producto_hero=producto_laptop_hero)

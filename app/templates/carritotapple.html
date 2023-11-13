@@ -1,0 +1,52 @@
+{% extends 'layoutPrincipal.html' %}
+{% block title %}
+carrito
+{% endblock %}
+
+{% block body %}
+
+<section class="flex justify-between w-full">
+
+    <div class="my-6 sm:w-1/4 w-full pl-8">
+        <p class="text-2xl font-bold">Obten Tapple IA</p>
+    </div>
+
+    <!-- Barra Progreso -->
+    <div class="w-full my-6 pr-8">
+        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+            <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-full"
+                style="width: 75%"> 75%</div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Seccion hero -->
+<section class="my-40 flex flex-col w-full">
+    <p class="mt-12 font-bold text-5xl mx-auto">Has obtenido una prueba gratuita de tapple IA</p>
+    <p class="mt-8 mb-4 mx-auto">Tu prueba gratuita terminara en 6 meses, luego sera de $9.99 USD / mes.</p>
+    <p class="mb-12 mx-auto">Puedes cancelar la subscripcion en cualquier momento.</p>
+    <a href="/tapple" class="mx-auto w-1/4 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br 
+        focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 
+        dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-lg px-5 py-2.5 text-center ">
+        Descarga tapple IA
+    </a>
+</section>
+
+<hr>
+
+<section class="flex w-full h-30 justify-between items-center px-24 p-y12">
+
+    <a href="/fincarrito" class="text-blue-500 my-6 text-lg">Continuar sin subscripcion automatica</a>
+
+    <a href="/fincarrito" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br 
+        focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 
+        dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 m-6 ">
+        Finalizar
+    </a>
+
+</section>
+
+
+{% endblock %}
