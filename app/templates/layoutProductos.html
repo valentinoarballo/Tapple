@@ -1,0 +1,54 @@
+{% extends 'layoutPrincipal.html' %}
+{% block title %}
+Productos
+{% endblock %}
+
+{% block body %}
+
+<!-- Tarjetas de productos -->
+<div class="flex flex-wrap justify-around mt-8">
+    {% for producto in productos %}
+
+    <div class="max-w-sm rounded overflow-hidden shadow-xl m-4 rounded-xl">
+        <div class="flex flex-col justify-between h-full px-6 py-4">
+            <div>
+                <div class="font-bold text-3xl mb-2">{{ producto.nombre }}</div>
+                
+                <img src="{{ producto.foto }}" alt="{{ producto.nombre }}">
+            </div>
+            
+            <div class="flex gap-10 mt-5">
+                <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Learn More</p>
+                <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Buy</p>
+            </div>
+        </div>
+    </div>
+    
+    {% endfor %}
+</div>
+
+
+<!-- Sección Hero -->
+<section class="bg-black text-white h-[800px] mt-10" style="background-image: url('{{ producto_hero.foto }}'); background-size: cover; background-position: center;">
+    <div class="flex flex-col items-center justify-center pt-16 mx-auto text-center">
+        <div class="max-w-xl mb-12">
+            <div class="flex flex-col justify-center items-center">
+                <h1 class="text-5xl font-semibold">{{ producto_hero.nombre }}</h1>
+                <h1 class="text-xl pt-2">Beyond Pro.</h1>
+
+                <div class="flex gap-10 mt-5">
+                    <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Learn More</p>
+                    <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Buy</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- No se necesita la etiqueta <img> en este caso -->
+    </div>
+</section>
+
+
+
+
+
+{% endblock %}

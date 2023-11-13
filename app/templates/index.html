@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layoutPrincipal.html' %}
 {% block title %}
 Home
 {% endblock %}
@@ -11,11 +11,15 @@ Home
         <div class="max-w-xl mb-12">
             <div class="flex flex-col justify-center items-center">
                 <h1 class="text-5xl font-semibold">IPhone 15 Pro</h1>
-                <h1 class="text-xl pt-2">Beyond Pro.</h1>
+                <h1 class="text-xl pt-2">Mas que Pro.</h1>
 
                 <div class="flex gap-10 mt-5">
-                    <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Learn More</p>
-                    <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">Buy</p>
+                    <a href="/celulares" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                        Ver Mas
+                    </a>
+                    <a href="/carrito" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                        Comprar
+                    </a>
                 </div>
 
             </div>
@@ -29,22 +33,26 @@ Home
 <!-- Paneles con productos destacados -->
 <section class="container mx-auto md:my-24 h-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
-        
-        
+
+
         <!-- Ipads -->
-        <div class="relative m-2 rounded-md">
-            <img src="{{ url_for('static', filename='ipad.svg') }}"
-                class="absolute inset-0 object-cover w-full h-full" alt="" />
+        <div class="relative m-2 rounded-xl shadow-2xl">
+            <img src="{{ url_for('static', filename='store/store-card-40-accessories-202303.jpeg') }}"
+                class="absolute inset-0 object-cover w-full h-full shadow-2xl rounded-xl" alt="" />
             <div class="relative min-h-[540px]">
                 <div class="flex flex-col items-center justify-between pt-10">
                     <div class=" flex flex-col justify-center items-center ">
-                        <p class="text-3xl font-semibold">IPad</p>
+                        <p class="text-3xl font-semibold">Apple Watch</p>
                         <p class="text-xl pt-2 text-center">
-                            Lovable. Drawable. Magical.
+                            Liviano. Practico. De calidad. 
                         </p>
                         <div class="flex gap-10 mt-2">
-                            <p class='text-lg font-medium text-blue-500 hover:underline cursor-pointer'>Learn More</p>
-                            <p class='text-lg font-medium text-blue-500 hover:underline cursor-pointer'>Buy</p>
+                            <a href="/relojes" class='text-lg font-medium text-blue-500 hover:underline cursor-pointer'>
+                                Ver Mas
+                            </a>
+                            <a href="/carrito" class='text-lg font-medium text-blue-500 hover:underline cursor-pointer'>
+                                Comprar
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -53,24 +61,24 @@ Home
 
 
         <!-- laptops -->
-        <div class="bg-black relative text-white m-2 rounded-md">
+        <div class="bg-black relative text-white m-2 rounded-xl shadow-2xl">
             <img src="{{ url_for('static', filename='macbook.svg') }}"
-                class="absolute inset-0 object-cover w-full h-full" alt="" />
+                class="absolute inset-0 object-cover w-full h-full shadow-2xl rounded-xl" alt="" />
             <div class="relative min-h-[540px]">
                 <div class="flex flex-col items-center justify-between pt-10">
                     <div class=" flex flex-col justify-center items-center text-white">
                         <p class="text-3xl font-semibold">MacBook Pro</p>
                         <p class="text-xl pt-2">
-                            Supercharged by M2 Pro and M2 Max.
+                            Supercargado con el nuevo procesador M2.
                         </p>
 
                         <div class="flex gap-10 mt-5">
-                            <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
-                                Learn More
-                            </p>
-                            <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
-                                Buy
-                            </p>
+                            <a href="/laptops" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Ver Mas
+                            </a>
+                            <a href="/carrito" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Comprar
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -79,24 +87,25 @@ Home
 
 
         <!-- Tapple tipo alexa (?) -->
-        <div class="bg-black relative text-white m-2 rounded-md">
-            <img src="{{ url_for('static', filename='home.svg') }}"
-                class="absolute inset-0 object-cover w-full h-full" alt="" />
+        <div class="bg-black relative text-white m-2 rounded-xl shadow-2xl">
+            <img src="{{ url_for('static', filename='home.svg') }}" 
+            class="absolute inset-0 object-cover w-full h-full shadow-2xl rounded-xl"
+                alt="" />
             <div class="relative min-h-[540px]">
                 <div class="flex flex-col items-center justify-between pt-10">
                     <div class=" flex flex-col justify-center items-center text-white">
                         <p class="text-3xl font-semibold">Tapple IA</p>
                         <p class="text-xl pt-2">
-                            On your HomePod.
+                            En tu Iphone, MacBook, HomePod.
                         </p>
 
                         <div class="flex gap-10 mt-5">
-                            <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
-                                Learn More
-                            </p>
-                            <p class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
-                                Buy
-                            </p>
+                            <a href="/tapple" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Ver Mas
+                            </a>
+                            <a href="/carrito" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Comprar
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -105,20 +114,24 @@ Home
 
 
         <!-- Airpods  -->
-        <div class="relative m-2 rounded-md">
-            <img src="{{ url_for('static', filename='airpodspro.svg') }}"
-                class="absolute inset-0 object-cover w-full h-full" alt="" />
+        <div class="relative m-2 rounded-xl shadow-2xl">
+            <img src="{{ url_for('static', filename='store/store-card-40-iphone-14-pro-202303.jpeg') }}"
+                class="absolute inset-0 object-cover w-full h-full shadow-2xl rounded-xl" alt="" />
             <div class="relative min-h-[540px]">
                 <div class="flex flex-col items-center justify-between pt-10">
                     <div class=" flex flex-col justify-center items-center text-white">
-                        <p class="text-3xl font-semibold">AirPods Pro</p>
-                        <p class="text-xl pt-2">
-                            Up to 2x more Active <br /> Noise Cancellation.
+                        <p class="text-3xl font-semibold">Celulares</p>
+                        <p class="text-xl pt-2 text-center">
+                            La mejor calidad de construccion. <br /> Con el mejor software.
                         </p>
 
                         <div class="flex gap-10 mt-5">
-                            <p class="text-lg ">Learn More</p>
-                            <p class="text-lg ">Buy</p>
+                            <a href="/celulares" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Ver Mas
+                            </a>
+                            <a href="/carrito" class="text-lg font-medium text-blue-500 hover:underline cursor-pointer">
+                                Comprar
+                            </a>
                         </div>
                     </div>
                 </div>
