@@ -7,10 +7,10 @@ Tapple
 
 <!-- component -->
 
-<div class="flex-1 p:2 sm:p-6 justify-between flex flex-col h-[50vh]">
+<div class="flex-1 mt-10 justify-between flex flex-col h-[50vh]">
     
     <div class="flex justify-center items-center center">
-        <img class="rounded" src="{{ url_for('static', filename='icon_lg.svg') }}" alt="">
+        <img src="{{ url_for('static', filename='icon_lg.svg') }}" alt="">
     </div>
 
     <div class="border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0">
@@ -72,10 +72,5 @@ Tapple
         </div>
     </div>
 </div>
-
-<script>
-    const el = document.getElementById('messages')
-    el.scrollTop = el.scrollHeight
-</script>
 
 {% endblock %}
