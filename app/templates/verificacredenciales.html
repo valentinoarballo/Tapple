@@ -1,0 +1,123 @@
+{% extends 'layoutPrincipal.html' %}
+{% block title %}
+carrito
+{% endblock %}
+
+{% block body %}
+
+<section class="flex justify-between w-full">
+
+    <div class="my-6 sm:w-1/4 w-full pl-8">
+        <p class="text-2xl font-bold">Verifica Credenciales</p>
+    </div>
+
+    <!-- Barra Progreso -->
+    <div class="w-full my-6 pr-8">
+        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+            <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-full"
+                style="width: 50%"> 50%</div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Diferentes credenciales del comprador -->
+<section class="w-full rounded-lg">
+    <div class="flex rounded-lg w-full p-8">
+
+        <img class="w-[50px] rounded-lg sm:ml-12 m-0" src="{{ url_for('static', filename='person.svg') }}" />
+
+        <div class="flex flex-col justify-start p-6 w-full">
+            <div class="mb-2 text-2xl font-semibold text-neutral-800 flex">
+                <h5>
+                   Nombre del dstinatario
+                </h5>
+                <button
+                    class="ml-auto bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 
+                    hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <svg width="30" height="30" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                      </svg>
+                </button>
+            </div>
+            <p class="mb-4 text-base text-neutral-600">
+                El producto va a llegar a nombre de John Elden
+            </p>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<section class="w-full rounded-lg">
+    <div class="flex rounded-lg w-full p-8">
+
+        <img class="w-[50px] rounded-lg sm:ml-12 m-0" src="{{ url_for('static', filename='geo-alt.svg') }}" />
+
+        <div class="flex flex-col justify-start p-6 w-full">
+            <div class="mb-2 text-2xl font-semibold text-neutral-800 flex">
+                <h5>
+                   Destino del paquete.
+                </h5>
+                <button
+                    class="ml-auto bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 
+                    hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <svg width="30" height="30" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                      </svg>
+                </button>
+            </div>
+            <p class="mb-4 text-base text-neutral-600">
+                El producto sera entregado en Calle 123
+            </p>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<section class="w-full rounded-lg">
+    <div class="flex rounded-lg w-full p-8">
+
+        <img class="w-[50px] rounded-lg sm:ml-12 m-0" src="{{ url_for('static', filename='credit-card-2-back.svg') }}" />
+
+        <div class="flex flex-col justify-start p-6 w-full">
+            <div class="mb-2 text-2xl font-semibold text-neutral-800 flex">
+                <h5>
+                   Metodo de pago.
+                </h5>
+                <button
+                    class="ml-auto bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 
+                    hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <svg width="30" height="30" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                      </svg>
+                </button>
+            </div>
+            <p class="mb-4 text-base text-neutral-600">
+                Se descontara un total de $300 de la targeta terminada en 6699
+            </p>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<section class="flex w-full h-30 justify-between items-center px-24 p-y12">
+
+    <a href="/verificacarrito" class="text-blue-500 my-6 text-lg">Volver</a>
+
+    <a href="/carritotapple" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br 
+        focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 
+        dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 m-6 ">
+        Comprar
+    </a>
+
+</section>
+
+
+{% endblock %}
