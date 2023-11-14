@@ -1,3 +1,4 @@
+
 # Tapple Store 
 
 Este es un proyecto para la asignatura de programacion II de la tecnicatura desarrollo de software, institucion tecnologica de rio cuarto .
@@ -11,6 +12,7 @@ Para ejecutar este proyecto, tiene que tener instalado Docker y docker-compose e
 <center> <h2>  Instrucciones </h2>  </center>
 
 Para ejecutar este proyecto, sigue estos pasos:
+
 
 <ol>
     <li>
@@ -72,6 +74,7 @@ Esta es una seccion simple pero tiene sus detalles, un claro y intuitivo boton d
 El carrito consta de 4 partes, esta es una de ellas, tenemos una barra de progreso que va avanzando a medida que completamos nuestro pedido, un boton para avanzar de color azul a la derecha y uno para volver mas discreto a la izquierda, todas las secciones de la pasarela de pago cumplen con esta organizacion basica y muestran informacion pertinente y sobre todo clara de lo que el usuario esta haciendo con cada clic.
 
 ![alt text](/app/static/appfotos/foto8.png)
+
 
 ## Integrantes
 <ul>
